@@ -9,6 +9,7 @@ import Signin from './signin.jsx';
 
 import './App.css';
 import image from './assets/Group 91.png';
+import Signup from './signup.jsx';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="signup" element={<Signup />} />
       </Routes>
 
     </Router>

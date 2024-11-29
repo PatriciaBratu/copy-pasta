@@ -20,7 +20,9 @@ function Div_Header() {
                     Add Recipe
                 </div>
                 <div style={{ position: 'absolute', width: "95px", height: "27px", left: "1756px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
-                    Register
+                    <Link to="/signup" style={{ margin: '10px', color: 'white', textDecoration: 'none' }}>
+                        Register
+                    </Link>
                 </div>
                 <div style={{
                     position: 'absolute',
