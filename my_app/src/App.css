@@ -24,7 +24,7 @@
 .background {
   background-image: url('./assets/Group-mare.png');
   background-size: cover;
-  position: relative;
+  position: absolute;
   /* Asigură acoperirea completă */
   background-repeat: no-repeat;
   /* Previne repetarea */
@@ -32,9 +32,9 @@
   /* Poziționează imaginea central */
   width: 2107.05px;
   /* Lățimea ocupă toată fereastra */
-  height: 1089.62px;
+  height: 1087.62px;
   top: 98px;
-  left: -350px;
+  left: 10px;
   /* Înălțimea ocupă toată fereastra */
 }
 
