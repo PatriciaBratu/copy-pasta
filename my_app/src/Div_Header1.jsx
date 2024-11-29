@@ -1,7 +1,7 @@
 import Group89 from './assets/Group 89.png';
 import { Link } from 'react-router-dom';
 
-function Div_Header() {
+function Div_Header1() {
     // const navigate = useNavigate();
     // const handleLogin = () => {
     //     // După autentificare cu succes, navigăm către /dashboard
@@ -42,12 +42,7 @@ function Div_Header() {
                     alignItems: "center" /*/* Alinierea pe verticală a textului */
                 }}>
                     <div style={{ position: "absolute", top: "5px" }}>
-
-                        <nav>
-                            <Link to="/signin" style={{ margin: '10px', color: 'white', textDecoration: 'none' }}>
-                                Login
-                            </Link>
-                        </nav>
+                        Login
 
                     </div>
                 </div>
@@ -57,4 +52,4 @@ function Div_Header() {
 
     )
 }
-export default Div_Header
+export default Div_Header1
