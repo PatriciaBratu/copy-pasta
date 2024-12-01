@@ -58,7 +58,7 @@ const Signup = () => {
 
 
             // Redirecționează utilizatorul (înlocuind window.location)
-            window.location = '/';
+            window.location = '/homepage_logat';
         } catch (error) {
             console.error('Error during sign-up:', error);
         }
@@ -319,36 +319,20 @@ const Signup = () => {
                                 }}
                             /></div>
                     </div>
-                    <div style={{
-                        position: "absolute",
-                        width: "344px",
-                        height: "74px",
-                        top: "1011px",
-                        left: "788px",
-                        gap: "0px",
-                        borderRadius: "15px 15px 15px 15px",
-                        backgroundColor: "rgba(0, 156, 65, 1)"
-
-                    }}>
-                        <div style={{
-                            position: "relative",
-                            width: "117px",
-                            height: "29px",
-                            top: "13px",
-                            left: "110px",
-                            gap: "0p",
-                            color: "white",
-                            fontFamily: "Montserrat",
-                            fontSize: "36px",
-                            fontWeight: "700",
-                            lineHeight: "43.88px",
+                    <button type="submit"
+                        style={{
+                            position: "absolute",
+                            width: "344px",
+                            height: "74px",
+                            top: "1011px",
+                            left: "788px",
+                            gap: "0px",
+                            borderRadius: "15px 15px 15px 15px",
+                            backgroundColor: "rgba(0, 156, 65, 1)"
+                        }}>Log in</button>
 
 
 
-                        }} >
-                            <button type="submit">
-                                Log in</button></div>
-                    </div>
 
                 </div >
             </form>
