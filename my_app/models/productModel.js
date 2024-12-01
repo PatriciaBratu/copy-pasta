@@ -3,6 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const recipeSchema = new mongoose.Schema({
     name: { type: String, required: true },
+    description: { type: String, required: true },
     rating: { type: Number, required: true, min: 0, max: 5 },
     creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Referință la User
 });
@@ -13,6 +14,9 @@ const userSchema = new mongoose.Schema(
         username: {
             type: String,
 
+        },
+        phone: {
+            type: String,
         },
         email: {
             type: String,

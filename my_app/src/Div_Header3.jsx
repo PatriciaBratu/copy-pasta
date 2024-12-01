@@ -9,12 +9,16 @@ function Div_Header() {
                 <div>
                     <img src={Group89} style={{ width: '123px', height: '63.4px', top: "20px", left: "20px", position: "absolute" }} />
                 </div>
-                <div style={{ position: 'absolute', width: "89px", height: "27px", left: "308px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
-                    Recipes
-                </div>
-                <div style={{ position: 'absolute', width: "131px", height: "27px", left: "427px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
-                    Add Recipe
-                </div>
+                <Link to={"/retete"} style={{
+                    color: "white"
+                }}>
+                    <div style={{ position: 'absolute', width: "89px", height: "27px", left: "308px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
+                        Recipes
+                    </div></Link>
+                <Link to={"/adauga_retete"}>
+                    <div style={{ position: 'absolute', width: "131px", height: "27px", left: "427px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
+                        Add Recipe
+                    </div></Link>
                 <div style={{ position: 'absolute', width: "95px", height: "27px", left: "1756px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
                     <Link to="/" style={{ margin: '10px', color: 'white', textDecoration: 'none' }}>
                         Log out

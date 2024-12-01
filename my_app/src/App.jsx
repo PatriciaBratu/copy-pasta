@@ -13,6 +13,7 @@ import image from './assets/Group 91.png';
 import Signup from './signup.jsx';
 import Profile from './profile.jsx'
 import Adauga_retete from './adauga_retete.jsx';
+import Retete from './retete.jsx';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/homepage_logat" element={<Homepage_logat />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/adauga_retete' element={<Adauga_retete />} />
+        <Route path='/retete' element={<Retete />} />
       </Routes>
 
     </Router>

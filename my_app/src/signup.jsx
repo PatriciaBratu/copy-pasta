@@ -14,6 +14,7 @@ const Signup = () => {
     const [telephone, setTelephone] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+
     const handleChange = (e) => {
         setInput(e.target.value); // Aceeași valoare pentru toate câmpurile
     };
@@ -50,15 +51,21 @@ const Signup = () => {
             password: password,
         };
         try {
-            console.log(user);
+
             const response = await axios.post('http://localhost:3000/signup', user);
-            console.log(response.data); // Afișează user-ul în consolă 
+            console.log('Server Response:', response);
+            const token = response.data.token; // Token-ul returnat de server
+            if (token) {
+                localStorage.setItem('authToken', token);
+                console.log('Token saved in localStorage');
+                window.location.href = '/homepage_logat'; // Redirecționează utilizatorul
+            } else {
+                console.error('Token not received from server');
+            }
 
 
 
 
-            // Redirecționează utilizatorul (înlocuind window.location)
-            window.location = '/homepage_logat';
         } catch (error) {
             console.error('Error during sign-up:', error);
         }
