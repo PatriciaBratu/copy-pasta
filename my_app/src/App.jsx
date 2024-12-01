@@ -13,22 +13,9 @@ import Signup from './signup.jsx';
 
 
 function App() {
-  // const [currentPage, setCurrentPage] = useState('home');
-  return (
-    // <Router>
-    //   <div className="background">
-    //     <img
-    //       src={image}
-    //       alt="Foreground"
-    //       className="foreground-image"
-    //     />
-    //   </div>
 
-    //   <Div_Header />
-    //   <Divwithrecipes />
-    //   <Div_contact />
-    //   <Div_bottom />
-    // </Router>
+  return (
+
     <Router>
       <Div_Header />
       <Routes>
