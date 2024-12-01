@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const app = express()
 const bcrypt = require('bcrypt')
 const { User, Recipe } = require('./models/productModel')
-import "bootstrap/dist/css/bootstrap.min.css"
+
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -31,9 +31,7 @@ app.post('/signup', async (req, res) => {
         console.log(req.body);
         const { username, password, email, nume_complet, data_inregistrare } = req.body;
         const newUser = new User({ username, password, email, nume_complet, data_inregistrare });
-        if (password !== confirmPassword) {
-            return res.status(400).json({ error: 'Passwords do not match' });
-        }
+
         // const salt = await bcrypt.genSalt()
         // const hashedPassword = await bcrypt.hash(req.body.password, salt)
         // console.log(salt)

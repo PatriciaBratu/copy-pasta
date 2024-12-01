@@ -38,12 +38,16 @@ const Signup = () => {
     const onSubmit = async (e) => {
         e.preventDefault(); // Previne comportamentul implicit (reîncărcarea paginii)
 
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+
         const user = {
-            name: name,
+            username: username,
             telephone: telephone,
             email: email, // Folosim starea email
             password: password,
-            confirmPassword: confirmPassword
         };
         try {
             console.log(user);
