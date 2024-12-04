@@ -1,5 +1,6 @@
 import Group89 from './assets/Group 89.png';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function Div_Header() {
     // const navigate = useNavigate();
@@ -17,10 +18,10 @@ function Div_Header() {
                     <div style={{ position: 'absolute', width: "89px", height: "27px", left: "308px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
                         Recipes
                     </div></Link>
-                <Link to={"/adauga_retete"}>
-                    <div style={{ position: 'absolute', width: "131px", height: "27px", left: "427px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
-                        Add Recipe
-                    </div></Link>
+
+                <div style={{ position: 'absolute', width: "131px", height: "27px", left: "427px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
+                    Add Recipe
+                </div>
                 <div style={{ position: 'absolute', width: "95px", height: "27px", left: "1756px", top: "35px", fontFamily: "Montserrat", fontWeight: "600", fontSize: "22px", lineHeight: "26.82px" }}>
                     <Link to="/signup" style={{ margin: '10px', color: 'white', textDecoration: 'none' }}>
                         Register

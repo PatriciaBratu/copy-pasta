@@ -3,6 +3,8 @@ import person from "./assets/person.png"
 import phone from "./assets/phone.png"
 import mail from "./assets/mail.png"
 import lock from "./assets/lock.png"
+import { useNavigate } from 'react-router-dom';
+
 
 
 import axios from 'axios';
@@ -13,7 +15,7 @@ const Signup = () => {
     const [username, setUsername] = useState('');
     const [telephone, setTelephone] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setInput(e.target.value); // Aceeași valoare pentru toate câmpurile

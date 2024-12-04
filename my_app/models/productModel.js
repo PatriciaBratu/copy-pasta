@@ -8,6 +8,7 @@ const recipeSchema = new mongoose.Schema({
     creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Referință la User
 });
 
+
 const userSchema = new mongoose.Schema(
     {
         id: { type: String, default: uuidv4, unique: true },
@@ -15,7 +16,7 @@ const userSchema = new mongoose.Schema(
             type: String,
 
         },
-        phone: {
+        telephone: {
             type: String,
         },
         email: {
@@ -27,14 +28,7 @@ const userSchema = new mongoose.Schema(
             required: [true, "Please enter the password"],
 
         },
-        nume_complet: {
-            type: String,
 
-        },
-        data_inregistrare: {
-            type: String,
-
-        },
 
     }
 )

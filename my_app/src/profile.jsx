@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { useLocation } from 'react-router-dom';
 
 import './App.css';
 import image from './assets/Group 91.png';
@@ -11,34 +11,12 @@ import axios from 'axios';
 
 
 const Profile = () => {
-    const [user, setUser] = useState(null);
-
-    useEffect(() => {
-        const fetchUserData = async () => {
-            const token = localStorage.getItem('authToken');
-
-            if (!token) {
-                console.log('No token found');
-                return;
-            }
-
-            try {
-                const response = await axios.get('http://localhost:3000/user', {
-                    headers: {
-                        Authorization: token, // Trimiterea token-ului în header
-                    },
-                });
-                setUser(response.data); // Setează datele utilizatorului
-                window.location.href = '/retete';
-            } catch (error) {
-                console.error('Error fetching user data:', error);
-            }
-        };
-
-        fetchUserData();
-    }, []);
+    const location = useLocation();
+    const user = location.state?.user; // Preluăm utilizatorul din starea transmisă
 
     if (!user) return <div>Loading...</div>;
+
+
 
     return (
         <>
@@ -74,7 +52,7 @@ const Profile = () => {
 
 
                     }}>
-                        Bucatar {user.username}
+                        Bucatar: {user.username}
                     </header>
                 </div>
 
@@ -125,7 +103,7 @@ const Profile = () => {
                     }}>
                         Telephone: {user.telephone}
                     </header>
-                    <header style={{
+                    {/* <header style={{
                         position: "absolute",
                         width: "537px",
                         height: "33px",
@@ -141,7 +119,7 @@ const Profile = () => {
 
                     }}>
                         Date: {user.data_inregistrare}
-                    </header>
+                    </header> */}
                 </div>
                 <Link to="/adauga_retete">
                     <button type="submit"

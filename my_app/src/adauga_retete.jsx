@@ -23,8 +23,8 @@ const Adauga_retete = () => {
         }
         try {
             const response = await axios.post(
-                '/retete', // Endpoint-ul tău backend
-                { title: 'Sample Title', ingredients: ['Ingredient1', 'Ingredient2'], instructions: 'Sample instructions' }, // Exemplu de date
+                'http://localhost:3000/adauga_retete', // Endpoint-ul tău backend
+                { title: 'Sample Title', description: 'Sample instructions' }, // Exemplu de date
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,  // Adaugă tokenul în header
@@ -84,7 +84,7 @@ const Adauga_retete = () => {
                         marginTop: '10px',
                     }}
                 />
-                <button type="submit"
+                <button onClick={handleAddRecipe}
                     style={{
                         position: "absolute",
                         width: "344px",
