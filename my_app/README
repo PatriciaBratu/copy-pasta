@@ -1,2 +1,2 @@
-npm start div     -> pentru backend
-npm start dev     -> pentru frontend
+npm run div     -> pentru backend
+npm run dev     -> pentru frontend
